@@ -53,7 +53,7 @@ services:
   inventario:
     build: ./inventario
     ports:
-      - "${INVENTARIO_PORT}:8081"
+      - "8082:8082"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://inventario-db:5432/${INVENTARIO_DB_NAME}
       - SPRING_DATASOURCE_USERNAME=${POSTGRES_USER}
