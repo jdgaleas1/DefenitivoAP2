@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+
+@theme {
+    /* Font Family */
+    --font-outfit: "Outfit", sans-serif;
+    --font-inter: "Inter", sans-serif;
+
+    /* Color */
+    --color-mainColor: #43b9b2;
+    --color-secondaryColor: #4169E1;
+    --color-lightColor: #FFD6B2;
+}
+
+/* Container */
+.container {
+    @apply 2xl:max-w-[1320px] xl:max-w-[1200px] lg:max-w-[992px] md:max-w-[768px] sm:max-w-[576px] max-w-[375px];
+}
+
+body {
+    @apply font-inter;
+}
+
