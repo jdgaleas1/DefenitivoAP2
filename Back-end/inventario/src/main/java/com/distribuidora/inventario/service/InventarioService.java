@@ -46,13 +46,16 @@ public class InventarioService {
         return repo.findById(sku).orElseThrow(() -> new RuntimeException("Producto no encontrado"));
     }
 
-    // ✅ PUT: actualizar producto
+    // ✅ PUT: actualizar producto - CORREGIDO
     public Producto actualizarProducto(String sku, Producto actualizado) {
         Producto producto = repo.findById(sku)
                 .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
 
+        // Actualizar todos los campos
         producto.setNombre(actualizado.getNombre());
         producto.setStock(actualizado.getStock());
+        producto.setPrecio(actualizado.getPrecio());
+
         return repo.save(producto);
     }
 
